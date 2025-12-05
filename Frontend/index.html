@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi tier Application Demo</title>
+</head>
+<body>
+  <h1>Multi tier web app</h1>
+  <p id="msg">Loading from backend...</p>
+
+  <script>
+    fetch("/api")
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById("msg").innerText =
+          data.message + " at " + data.time;
+      })
+      .catch(err => {
+        document.getElementById("msg").innerText = "Error: " + err;
+      });
+  </script>
+</body>
+</html>
