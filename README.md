@@ -146,3 +146,4 @@ The backend uses environment variables defined in `Backend/.env`:
 - `REDIS_PORT`: Usually 6379
 - `PORT`: Backend listening port (4001)
 
+![kubernetes](log.PNG)
